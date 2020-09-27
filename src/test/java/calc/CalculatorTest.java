@@ -27,4 +27,10 @@ public class CalculatorTest {
         Assertions.assertEquals(4, calc.multiplication(2, 2));
     }
 
-}
+    @Test
+    void arithmeticExceptionIsThrownWhenTriesToDivideByZero(){
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            calc.division(2, 0);
+        });
+        }
+    }
